@@ -1,13 +1,12 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html>
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="https://cdn.jsdelivr.net/gh/gdtool/zhaopp/cfblog/favicon.ico">
   <title><!--{opt.siteName}--></title>
   <meta name="keywords" content="<!--{opt.keyWords}-->">
   <meta name="description" content="<!--{opt.siteDescription}-->">
-  <style type="text/css">
+  <style>
     img.wp-smiley,
     img.emoji {
       display: inline !important;
@@ -21,55 +20,38 @@
       padding: 0 !important;
     }
   </style>
-  <link rel="stylesheet" id="wp-block-library-css" href="https://cdn.jsdelivr.net/gh/WordPress/WordPress@5.5.3/wp-includes/css/dist/block-library/style.min.css?ver=5.6" type="text/css" media="all">
-  <link rel="stylesheet" id="themonic-fonts-css" href="https://fonts.googleapis.com/css?family=Ubuntu%3A400%2C700&amp;subset=latin%2Clatin-ext" type="text/css" media="all">
-  <link rel="stylesheet" id="themonic-style-css" href="https://cdn.jsdelivr.net/wp/themes/iconic-one/2.1.8/style.min.css?ver=1.7.8" type="text/css" media="all">
-  <link rel="stylesheet" id="custom-style-css" href="https://cdn.jsdelivr.net/wp/themes/iconic-one/2.1.8/custom.min.css?ver=5.6" type="text/css" media="all">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/wp/themes/iconic-one/2.1.8/style.min.css?ver=1.7.8">
 </head>
-<body class="home blog logged-in custom-font-enabled single-author hfeed">
-  <div id="page" class="site">
-    <header id="masthead" class="site-header" role="banner">
-      <div class="io-title-description">
-        <a href="/" title="<!--{opt.siteName}-->" rel="home"><!--{opt.siteName}--></a>
-        <br>
-        <a class="site-description"><!--{opt.siteDescription}--></a>
-      </div>
-      <!--{widgetMenu.html}-->
-      <div class="clear"></div>
-    </header>
-    <div id="main" class="wrapper">
-      <div id="primary" class="site-content">
-        <!--{articleList.html}-->
-        <!--{articleSingle.html}-->
-      </div>
-      <div id="secondary" class="widget-area" role="complementary">
-        <!--{widgetRecently.html}-->
-        <!--{widgetCategory.html}-->
-        <!--{widgetTags.html}-->
-        <aside id="meta-2" class="widget widget_meta">
-          <p class="widget-title">链接</p>
-          <ul>
-            <li><a href="/admin/">管理站点</a></li>
-          </ul>
-        </aside>
-      </div>
-    </div>
-    <div class="site-wordpress">
-      <!--{opt.copyRight}-->
-        </div>
-    <footer id="colophon" class="site-footer" role="contentinfo">
-      <div class="site-info">
-        <a href="<!--{opt.siteUrl}-->"><!--{opt.siteName}--></a> &copy; <a href="https://www.openai.com">OpenAI</a> <!--{opt.copyYear}-->
-      </div>
-    </footer>
-  </div>
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/wp/themes/iconic-one/2.1.8/js/custom.min.js?ver=2.1.8" defer></script>
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/gdtool/zhaopp/cfblog/js/scrolltotop.js" defer></script>
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/gdtool/zhaopp/cfblog/js/highlight.pack.js" defer></script>
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/gdtool/zhaopp/cfblog/js/lazyload.min.js" defer></script>
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/gdtool/zhaopp/cfblog/js/intersection-observer.js" defer></script>
+<body>
+  <header>
+    <h1><a href="/" title="<!--{opt.siteName}-->"><!--{opt.siteName}--></a></h1>
+    <p class="site-description"><!--{opt.siteDescription}--></p>
+  </header>
+  <nav>
+    <!--{widgetMenu.html}-->
+  </nav>
+  <main>
+    <!--{articleList.html}-->
+    <!--{articleSingle.html}-->
+  </main>
+  <aside>
+    <!--{widgetRecently.html}-->
+    <!--{widgetCategory.html}-->
+    <!--{widgetTags.html}-->
+    <p>链接</p>
+    <ul>
+      <li><a href="/admin/">管理站点</a></li>
+    </ul>
+  </aside>
+  <footer>
+    <p>&copy; <a href="https://www.openai.com">OpenAI</a> <!--{opt.copyYear}--></p>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/wp/themes/iconic-one/2.1.8/js/custom.min.js?ver=2.1.8" defer></script>
+  <script src="https://cdn.jsdelivr.net/gh/gdtool/zhaopp/cfblog/js/scrolltotop.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/gh/gdtool/zhaopp/cfblog/js/highlight.pack.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/gh/gdtool/zhaopp/cfblog/js/lazyload.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/gh/gdtool/zhaopp/cfblog/js/intersection-observer.js" defer></script>
   <script>
-    // 懒加载
     var lazyloadImage = document.querySelectorAll("img.lazyload");
     var lazyloadImageObserver = new IntersectionObserver(function(entries, observer) {
       entries.forEach(function(entry) {
@@ -85,7 +67,6 @@
       lazyloadImageObserver.observe(img);
     });
 
-    // 代码高亮
     document.addEventListener('DOMContentLoaded', (event) => {
       document.querySelectorAll('pre code').forEach((block) => {
         hljs.highlightBlock(block);
@@ -94,4 +75,3 @@
   </script>
 </body>
 </html>
-
