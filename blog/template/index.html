@@ -1,77 +1,92 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="profile" href="http://gmpg.org/xfn/11" />
+  <link rel="icon" type="image/x-icon" href="https://cdn.jsdelivr.net/gh/gdtool/zhaopp/cfblog/favicon.ico" />
+  <link rel="Shortcut Icon" href="https://cdn.jsdelivr.net/gh/gdtool/zhaopp/cfblog/favicon.ico">
   <title><!--{opt.siteName}--></title>
-  <meta name="keywords" content="<!--{opt.keyWords}-->">
-  <meta name="description" content="<!--{opt.siteDescription}-->">
-  <style>
-    img.wp-smiley,
-    img.emoji {
-      display: inline !important;
-      border: none !important;
-      box-shadow: none !important;
-      height: 1em !important;
-      width: 1em !important;
-      margin: 0 .07em !important;
-      vertical-align: -0.1em !important;
-      background: none !important;
-      padding: 0 !important;
+  <meta name="keywords" content="<!--{opt.keyWords}-->" />
+  <meta name="description" content="<!--{opt.siteDescription}-->" />
+  <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+  <link rel="dns-prefetch" href="//s.w.org" />
+  <link rel="stylesheet" id="wp-block-library-css" href="https://cdn.jsdelivr.net/gh/WordPress/WordPress@5.5.3/wp-includes/css/dist/block-library/style.min.css?ver=5.6" type="text/css" media="all" />
+  <link rel="stylesheet" id="themonic-fonts-css" href="https://fonts.googleapis.com/css?family=Ubuntu%3A400%2C700&amp;subset=latin%2Clatin-ext" type="text/css" media="all" />
+  <link rel="stylesheet" id="themonic-style-css" href="https://cdn.jsdelivr.net/wp/themes/iconic-one/2.1.8/style.min.css?ver=1.7.8" type="text/css" media="all" />
+  <link rel="stylesheet" id="custom-style-css" href="https://cdn.jsdelivr.net/wp/themes/iconic-one/2.1.8/custom.min.css?ver=5.6" type="text/css" media="all" />
+  <meta name="generator" content="WordPress 5.6" />
+  <style type="text/css" id="wp-custom-css">
+    @media (max-width: 768px) {
+      #secondary {
+        display:none !important;
+      }
+      #menu-top{
+        display:none !important;
+      }
+      .site-content {
+        float: left;
+        width: 95%;
+        padding: 30px 2% 0 1%;
+      }
+      .site-description{
+        display:none !important;
+      }
+      .io-title-description {
+        display: inline-block;
+        margin: 17px 0;
+        padding: 0px 0;
+        float: none;
+      }
+      .wrapper {
+        border: 1px solid #16a1e7 !important;
+      }
     }
   </style>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/wp/themes/iconic-one/2.1.8/style.min.css?ver=1.7.8">
 </head>
-<body>
-  <header>
-    <h1><a href="/" title="<!--{opt.siteName}-->"><!--{opt.siteName}--></a></h1>
-    <p class="site-description"><!--{opt.siteDescription}--></p>
-  </header>
-  <nav>
-    <!--{widgetMenu.html}-->
-  </nav>
-  <main>
-    <!--{articleList.html}-->
-    <!--{articleSingle.html}-->
-  </main>
-  <aside>
-    <!--{widgetRecently.html}-->
-    <!--{widgetCategory.html}-->
-    <!--{widgetTags.html}-->
-    <p>链接</p>
-    <ul>
-      <li><a href="/admin/">管理站点</a></li>
-    </ul>
-  </aside>
-  <footer>
-    <p>&copy; <a href="https://www.openai.com">OpenAI</a> <!--{opt.copyYear}--></p>
-  </footer>
-  <script src="https://cdn.jsdelivr.net/wp/themes/iconic-one/2.1.8/js/custom.min.js?ver=2.1.8" defer></script>
-  <script src="https://cdn.jsdelivr.net/gh/gdtool/zhaopp/cfblog/js/scrolltotop.js" defer></script>
-  <script src="https://cdn.jsdelivr.net/gh/gdtool/zhaopp/cfblog/js/highlight.pack.js" defer></script>
-  <script src="https://cdn.jsdelivr.net/gh/gdtool/zhaopp/cfblog/js/lazyload.min.js" defer></script>
-  <script src="https://cdn.jsdelivr.net/gh/gdtool/zhaopp/cfblog/js/intersection-observer.js" defer></script>
-  <script>
-    var lazyloadImage = document.querySelectorAll("img.lazyload");
-    var lazyloadImageObserver = new IntersectionObserver(function(entries, observer) {
-      entries.forEach(function(entry) {
-        if (entry.isIntersecting) {
-          var img = entry.target;
-          img.src = img.dataset.src;
-          img.classList.remove("lazyload");
-          lazyloadImageObserver.unobserve(img);
-        }
-      });
-    });
-    lazyloadImage.forEach(function(img) {
-      lazyloadImageObserver.observe(img);
-    });
-
-    document.addEventListener('DOMContentLoaded', (event) => {
-      document.querySelectorAll('pre code').forEach((block) => {
-        hljs.highlightBlock(block);
-      });
-    });
-  </script>
+<body class="home blog logged-in custom-font-enabled single-author hfeed">
+  <div id="page" class="site">
+    <header id="masthead" class="site-header" role="banner">
+      <div class="io-title-description">
+        <a href="/" title="<!--{opt.siteName}-->" rel="home"><!--{opt.siteName}--></a>
+        <br ...="" />
+        <a class="site-description"><!--{opt.siteDescription}--></a>
+      </div>
+      <!--{widgetMenu.html}-->
+      <div class="clear"></div>
+    </header>
+    <div id="content" class="site-content">
+      <div id="primary" class="content-area">
+        <main id="main" class="site-main" role="main">
+          <!--{loopTopnews}-->
+          <article id="post-<!--{topnews.ID}-->" class="post-<!--{topnews.ID}--> post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
+            <header class="entry-header">
+              <h1 class="entry-title">
+                <a href="<!--{topnews.Permalink}-->" rel="bookmark"><!--{topnews.Title}--></a>
+              </h1>
+              <div class="entry-meta">
+                <span class="posted-on">
+                  <a href="<!--{topnews.Permalink}-->" rel="bookmark">
+                    <time class="entry-date published" datetime="<!--{topnews.Date}-->"><!--{topnews.Date}--></time>
+                  </a>
+                </span>
+              </div>
+            </header>
+            <div class="entry-summary">
+              <p><!--{topnews.Excerpt}--></p>
+            </div>
+          </article>
+          <!--{/loopTopnews}-->
+        </main>
+      </div>
+    </div>
+    <footer id="colophon" class="site-footer" role="contentinfo">
+      <div class="site-info">
+        <a href="<!--{opt.siteUrl}-->" title="<!--{opt.siteName}-->" rel="home"><!--{opt.siteName}--></a>
+        <br>
+        <a href="https://www.zhaopp.cn">博客主题</a>
+      </div>
+    </footer>
+  </div>
 </body>
 </html>
