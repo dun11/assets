@@ -100,7 +100,7 @@
 				</div>
 	
 				<div class="form-group">
-				    <label for="name">菜单,例:<code>[{"title":"技术文章","url":"/category/技术文章"},{"title":"管理","url":"/admin"}]</code></label>
+				    <label for="name">菜单,例:<code>[{"title":"技术文章","url":"/category/技术文章"},{"title":"管理","url":"/"}]</code></label>
 					<textarea class="form-control" id="WidgetMenu" name="WidgetMenu" rows="10"  placeholder='[
 	{"title":"菜单A"	,"url":"/category/菜单A"},
 	{"title":"菜单B"	,"url":"/category/菜单B"}
@@ -146,7 +146,7 @@
     $("#loadmore").click(function(){
         var page=$("#page").val();
         $.ajax({
-            url:"/admin/getList/" + page + "/",
+            url:"/getList/" + page + "/",
             type:'GET',
             dataType:"json",
             //data:{"page":page,"typeid":typeid},
@@ -156,7 +156,7 @@
                     $.each(data,function(i){
                         var Info = data[i];
                         var num = i+1;
-                        tableContent += '<tr><td>'+Info.id+'</td><td><a href="/admin/edit/'+Info.id+'/">'+Info.title+'</a></td><td>'+Info.createDate.replace("T","")+'</td></tr>';
+                        tableContent += '<tr><td>'+Info.id+'</td><td><a href="/edit/'+Info.id+'/">'+Info.title+'</a></td><td>'+Info.createDate.replace("T","")+'</td></tr>';
      
                     })
                     $("#articleList").append(tableContent);
@@ -177,9 +177,9 @@
            return;
             
         }
-        var postURL = "/admin/saveEdit/";
+        var postURL = "/saveEdit/";
         if ($('#id').val() == "" || $('#id').val() == null)
-            postURL=  "/admin/saveAddNew/";
+            postURL=  "/saveAddNew/";
         $.ajax({
             type: "POST",
             dataType: "json",
@@ -215,7 +215,7 @@
             type: "POST",
             dataType: "json",
 			contentType: "application/json; charset=utf-8",
-            url: "/admin/saveConfig/" ,//url
+            url: "/saveConfig/" ,//url
 			data: JSON.stringify($("#configForm").serializeArray()), 
             success: function (result) {
                 alert(result.msg);
@@ -231,7 +231,7 @@
             type: "POST",
             dataType: "json",
 			contentType: "application/json; charset=utf-8",
-            url: "/admin/publish/" ,//url
+            url: "/publish/" ,//url
             success: function (result) {
                 alert(result.msg);
             }
