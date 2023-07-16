@@ -124,7 +124,6 @@
          		});
          	//表单赋值
          	$('#createDate').val(new Date());
-         	
          	$('#WidgetCategory').val(JSON.stringify(categoryJson));
          	$('#WidgetMenu').val(JSON.stringify(menuJson));
          	var category = $('#category');
@@ -143,17 +142,14 @@
                     dataType:"json",
                     //data:{"page":page,"typeid":typeid},
                     success:function(data){
-            
                             tableContent="";
                             $.each(data,function(i){
                                 var Info = data[i];
                                 var num = i+1;
                                 tableContent += '<tr><td>'+Info.id+'</td><td><a href="/admin/edit/'+Info.id+'/">'+Info.title+'</a></td><td>'+Info.createDate.replace("T","")+'</td></tr>';
-             
                             })
                             $("#articleList").append(tableContent);
                             $("#page").val(++page);
-              
                     }
                 });
             })
@@ -163,11 +159,9 @@
                     $('#WidgetMenu').val() == "" || $('#WidgetMenu').val() == null
                     || $('#createDate').val() == "" || $('#createDate').val() == null
                     || $('#createDate').val() == "" || $('#createDate').val() == null
-                
                 ){
                    alert("信息不全");
                    return;
-                    
                 }
                 var postURL = "/admin/saveEdit/";
                 if ($('#id').val() == "" || $('#id').val() == null)
@@ -238,7 +232,6 @@
                         }else{
                             return false;
                         }
-            
                     } catch(e) {
                        // console.log('error：'+str+'!!!'+e);
                         return false;
