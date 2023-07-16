@@ -9,56 +9,35 @@
       <meta name="keywords" content="<!--{opt.keyWords}-->" />
       <meta name="description" content="<!--{opt.siteDescription}-->" />
       <link rel="stylesheet" id="wp-block-library-css" href="https://cdn.jsdelivr.net/gh/WordPress/WordPress@5.5.3/wp-includes/css/dist/block-library/style.min.css?ver=5.6" type="text/css" media="all" />
+      <link rel="stylesheet" id="themonic-fonts-css" href="https://fonts.googleapis.com/css?family=Ubuntu%3A400%2C700&amp;subset=latin%2Clatin-ext" type="text/css" media="all" />
+      <link rel="stylesheet" id="themonic-style-css" href="https://cdn.jsdelivr.net/wp/themes/iconic-one/2.1.8/style.min.css?ver=1.7.8" type="text/css" media="all" />
+      <link rel="stylesheet" id="custom-style-css" href="https://cdn.jsdelivr.net/wp/themes/iconic-one/2.1.8/custom.min.css?ver=5.6" type="text/css" media="all" />
       <style type="text/css">
+         /* 原来的 CSS 样式 */
          img.wp-smiley,
          img.emoji {
-         display: inline !important;
-         border: none !important;
-         box-shadow: none !important;
-         height: 1em !important;
-         width: 1em !important;
-         margin: 0 .07em !important;
-         vertical-align: -0.1em !important;
-         background: none !important;
-         padding: 0 !important;
+            display: inline !important;
+            border: none !important;
+            box-shadow: none !important;
+            height: 1em !important;
+            width: 1em !important;
+            margin: 0 .07em !important;
+            vertical-align: -0.1em !important;
+            background: none !important;
+            padding: 0 !important;
          }
          .io-title-description {
-         display: inline-block;
-         margin: 170px 10px;
-         padding: 10px;
-         }
-         .io-title-description a {
-         font-family: 'Arial', sans-serif;
-         font-size: 40px;
-         font-weight: bold;
-         color: #333;
-         }
-
-         .io-title-description .site-description {
-         font-family: 'Arial', sans-serif;
-         font-size: 16px;
-         font-weight: normal;
-         color: #666;
-         }
-
-         @media (max-width: 768px) {
-         #secondary {
-         display: none !important;
-         }
-         #menu-top {
-         display: none !important;
-         }
-         .site-content {
-         float: left;
-         width: 95%;
-         padding: 30px 2% 0 1%;
-         }
-         .site-description {
-         display: none !important;
+            display: inline-block;
+            margin: 170px 10px;
+            padding: 10px 10px;
+            float: none;
+            font-family: 'Arial', sans-serif;
+            font-size: 40px;
+            font-weight: bold;
+            color: #333;
          }
          .wrapper {
-         border: 1px solid #16a1e7 !important;
-         }
+            border: 1px solid #16a1e7 !important;
          }
       </style>
       <!--{opt.codeBeforHead}-->
@@ -72,17 +51,17 @@
                <span class="site-description"><!--{opt.siteDescription}--></span>
             </div>
             <!--{widgetMenu.html}-->
-            <!-- #site-navigation -->
+            <!-- #site-navigation --> 
             <div class="clear"></div>
          </header>
-         <!-- #masthead -->
+         <!-- #masthead --> 
          <div id="main" class="wrapper">
             <div id="primary" class="site-content">
                <!--{articleList.html}-->
                <!--{articleSingle.html}-->
-               <!-- #上面俩,二选一 -->
+               <!-- #上面俩,二选一 --> 
             </div>
-            <!-- #primary -->
+            <!-- #primary --> 
             <div id="secondary" class="widget-area" role="complementary">
                <!--{widgetRecently.html}-->
                <!--{widgetCategory.html}-->
@@ -94,17 +73,15 @@
                   </ul>
                </aside>
             </div>
-            <!-- #secondary -->
+            <!-- #secondary --> 
          </div>
-         <!-- #main .wrapper -->
-         <!-- #colophon -->
-         <div class="site-wordpress">
-            <!--{opt.copyRight}-->
-         </div>
-         <!-- .site-info -->
+         <!-- #main .wrapper --> 
+         <!-- #colophon --> 
+         <div class="site-wordpress"><!--{opt.copyRight}--></div>
+         <!-- .site-info --> 
          <div class="clear"></div>
       </div>
-      <!-- #page -->
+      <!-- #page --> 
       <!--{opt.codeBeforBody}-->
    </body>
 </html>
