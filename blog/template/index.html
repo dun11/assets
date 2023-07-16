@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 <html>
    <head>
-      <meta charset="utf-8" />
+      <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <link rel="profile" href="http://gmpg.org/xfn/11" />
-      <link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/dun11/assets/main/favicon.ico" />
-      <link rel="Shortcut Icon" href="https://raw.githubusercontent.com/dun11/assets/main/favicon.ico">
-      <title>
-         <!--{opt.siteName}-->
-      </title>
+      <link rel="icon" type="image/x-icon" href="https://cdn.jsdelivr.net/gh/gdtool/zhaopp/cfblog/favicon.ico" />
+      <link rel="Shortcut Icon" href="https://cdn.jsdelivr.net/gh/gdtool/zhaopp/cfblog/favicon.ico">
+      <title><!--{opt.siteName}--></title>
       <meta name="keywords" content="<!--{opt.keyWords}-->" />
       <meta name="description" content="<!--{opt.siteDescription}-->" />
+      <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+      <link rel="dns-prefetch" href="//s.w.org" />
+      <script type="text/javascript">
+         window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/cdn.jsdelivr.net\/gh\/gdtool\/zhaopp\/cfblog\/wp-emoji-release.min.js?ver=5.6"}};
+         !function(e,a,t){var r,n,o,i,p=a.createElement("canvas"),s=p.getContext&&p.getContext("2d");function c(e,t){var a=String.fromCharCode;s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,e),0,0);var r=p.toDataURL();return s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,t),0,0),r===p.toDataURL()}function l(e){if(!s||!s.fillText)return!1;switch(s.textBaseline="top",s.font="600 32px Arial",e){case"flag":return!c([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])&&(!c([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!c([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]));case"emoji":return!c([55357,56424,8205,55356,57212],[55357,56424,8203,55356,57212])}return!1}function d(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(i=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},o=0;o<i.length;o++)t.supports[i[o]]=l(i[o]),t.supports.everything=t.supports.everything&&t.supports[i[o]],"flag"!==i[o]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[i[o]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(r=t.source||{}).concatemoji?d(r.concatemoji):r.wpemoji&&r.twemoji&&(d(r.twemoji),d(r.wpemoji)))}(window,document,window._wpemojiSettings);
+      </script> 
       <style type="text/css">
          img.wp-smiley,
          img.emoji {
@@ -51,13 +55,9 @@
          }
          .io-title-description {
          display: inline-block;
-         margin: 170px 10px;
-         padding: 10px 10px;
+         margin: 17px 0;
+         padding: 0px 0;
          float: none;
-         font-family: 'Arial', sans-serif; /* 设置字体为Arial或其他指定的字体 */
-         font-size: 40px; /* 设置字体大小 */
-         font-weight: bold; /* 设置字体粗细 */
-         color: #333; /* 设置字体颜色 */
          }
          .wrapper {
          border: 1px solid #16a1e7 !important;
@@ -70,13 +70,9 @@
       <div id="page" class="site">
          <header id="masthead" class="site-header" role="banner">
             <div class="io-title-description">
-               <a href="/" title="<!--{opt.siteName}-->" rel="home">
-                  <!--{opt.siteName}-->
-               </a>
+               <a href="/" title="<!--{opt.siteName}-->" rel="home"><!--{opt.siteName}--></a>
                <br />
-               <a class="site-description">
-                  <!--{opt.siteDescription}-->
-               </a>
+               <span class="site-description"><!--{opt.siteDescription}--></span>
             </div>
             <!--{widgetMenu.html}-->
             <!-- #site-navigation --> 
@@ -105,13 +101,14 @@
          </div>
          <!-- #main .wrapper --> 
          <!-- #colophon --> 
-         <div class="site-wordpress">
-            <!--{opt.copyRight}-->
-         </div>
+         <div class="site-wordpress"><!--{opt.copyRight}--></div>
          <!-- .site-info --> 
          <div class="clear"></div>
       </div>
       <!-- #page --> 
+      <script type="text/javascript" src="https://cdn.jsdelivr.net/wp/themes/iconic-one/2.1.8/js/selectnav.min.js?ver=1.0" id="themonic-mobile-navigation-js"></script> 
+      <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/WordPress/WordPress@5.6/wp-includes/js/clipboard.min.js?ver=5.6" id="clipboard-js"></script> 
+      <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/gdtool/zhaopp/cfblog/wp-embed.min.js?ver=5.6" id="wp-embed-js"></script> 
       <!--{opt.codeBeforBody}-->
    </body>
 </html>
